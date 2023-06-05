@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cataract Detection</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+
+<div class="form-h1">
+    <h1>Cataract Detection</h1>
+    
+    <form action="/predict" method="post" enctype="multipart/form-data">
+        <label for="image">Select an image:</label>
+        <input type="file" id="image" name="image"><br>
+        <img id="preview" src="#" alt="">
+        <div id="prediction" class="prediction-text"></div><br>
+        <button type="submit" id="predict-btn">Predict</button>
+    </form>
+
+</div>
+
+    <div class="footer">
+        <p>All rights reserved &copy; 2023 Md Zahidul Islam</p>
+        <p>Follow me on <a href="https://github.com/Snigdho8869" target="_blank">GitHub</a> and <a href="https://www.facebook.com/zahidul.snigdho/" target="_blank">Facebook</a></p>
+    </div>
+    
+    <script src="{{ url_for('static', filename='javascript.js') }}"></script>
+</body>
+</html>
